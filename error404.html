@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - لوفينغ هومز</title>
+    <link rel="stylesheet" href="../css_styles/style.css">
+    <link rel="stylesheet" href="../css_styles/layout.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../images/logo.avif" alt="الشعار">
+            <span class="logo-text">Loving Homes</span>
+        </div>
+
+         <div class="font-controls">
+    <button class="font-btn" onclick="changeFontSize(2)" title="تكبير الخط">A+</button>
+    <button class="font-btn" onclick="changeFontSize(-2)" title="تصغير الخط">A-</button>
+    <button class="font-btn" onclick="resetFontSize()" title="إعادة الضبط" style="font-size: 12px;">Reset</button>
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="facilities.html">المرافق</a></li>
+                <li><a href="packages.html">الحزم</a></li>
+                <li><a href="contact.html" class="active">اتصل بنا</a></li>
+                <li><a href="booking.html" class="btn-booking">احجز الآن</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-info">
+            <h2>تواصل معنا</h2>
+            <p>نحن هنا للإجابة على جميع استفساراتكم حول رعاية أليفك.</p>
+            <ul>
+                <li><strong>العنوان:</strong> شارع الرفق، حي الكلاب السعيدة، المدينة</li>
+                <li><strong>الهاتف:</strong> 0123456789</li>
+                <li><strong>البريد الإلكتروني:</strong> info@lovinghomes.com</li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>الاسم الكامل:</label>
+                    <input type="text" placeholder="أدخل اسمك هنا" required>
+                </div>
+                <div class="form-group">
+                    <label>البريد الإلكتروني:</label>
+                    <input type="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>رسالتك:</label>
+                    <textarea rows="5" placeholder="كيف يمكننا مساعدتك؟" required></textarea>
+                </div>
+                <button type="submit" class="btn-booking">إرسال الرسالة</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <div class="social-item">
+                <div class="social-icon-circle">
+                    <a href="#">
+                        <img src="../images/whatsapp-icon.png" alt="واتساب">
+                    </a>
+                </div>
+                <span class="social-label">واتساب</span>
+            </div>
+            <div class="social-item">
+                <div class="social-icon-circle">
+                    <a href="#">
+                        <img src="../images/instagram-icon.png" alt="انستقرام">
+                    </a>
+                </div>
+                <span class="social-label">انستقرام</span>
+            </div>
+            <div class="social-item">
+                <div class="social-icon-circle">
+                    <a href="#">
+                        <img src="../images/facebook-icon.png" alt="فيسبوك">
+                    </a>
+                </div>
+                <span class="social-label">فيسبوك</span>
+            </div>
+        </div>
+        <p>© 2026 لوفينغ هومز - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+   
+</div>
+</body>
+
+</html>

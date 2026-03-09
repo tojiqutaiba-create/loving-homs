@@ -1,0 +1,51 @@
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 10%;
+    flex-wrap: wrap;
+}
+
+.text-side, .image-side {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.image-side {
+    position: relative;
+}
+
+.image-side img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.image-side:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .row, .reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+}

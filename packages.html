@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حزم الإقامة - لوفينغ هومز</title>
+    <link rel="stylesheet" href="../css_styles/style.css">
+    <link rel="stylesheet" href="../css_styles/layout.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../images/logo.avif" alt="الشعار">
+            <span class="logo-text">Loving Homes</span>
+        </div>
+
+        <div class="font-controls">
+        <button class="font-btn" onclick="changeFontSize(2)" title="تكبير الخط">A+</button>
+        <button class="font-btn" onclick="changeFontSize(-2)" title="تصغير الخط">A-</button>
+        <button class="font-btn" onclick="resetFontSize()" title="إعادة الضبط">Reset</button>
+    </div>
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="facilities.html">المرافق</a></li>
+                <li><a href="packages.html" class="active">الحزم</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="booking.html" class="btn-booking">احجز الآن</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div style="text-align:center; padding: 40px 20px;">
+            <h1>اختر الحزمة المناسبة لأليفك</h1>
+            <p>نقدم خيارات مرنة تناسب احتياجات كل كلب وميزانية كل صاحب أليف.</p>
+        </div>
+
+        <section class="packages-grid" id="packages-grid">
+            <div class="package-card">
+                <img src="../images/pkg-daycare.png" alt="حزمة اليوم الواحد">
+                <div class="package-info">
+                    <h3>حزمة اليوم الواحد</h3>
+                    <p class="price">200$ / يوم</p>
+                    <ul>
+                        <li>لعب جماعي مراقب</li>
+                        <li>وجبة خفيفة</li>
+                        <li>رعاية نهارية (بدون مبيت)</li>
+                    </ul>
+                    <a href="booking.html" class="btn-select">اختر هذه الحزمة</a>
+                </div>
+            </div>
+
+            <div class="package-card featured">
+                <img src="../images/pkg-classic.png" alt="الحزمة الكلاسيكية">
+                <div class="package-info">
+                    <span class="badge">الأكثر طلباً</span>
+                    <h3>الحزمة الكلاسيكية</h3>
+                    <p class="price">500$ / يوم</p>
+                    <ul>
+                        <li>مبيت في جناح خاص</li>
+                        <li>وجبتان كاملتان</li>
+                        <li>جلسة تدريب يومية</li>
+                    </ul>
+                    <a href="booking.html" class="btn-select">اختر هذه الحزمة</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="../images/pkg-premium.png" alt="الحزمة المميزة">
+                <div class="package-info">
+                    <h3>الحزمة المميزة</h3>
+                    <p class="price">700$ / يوم</p>
+                    <ul>
+                        <li>جناح ملكي بتدفئة أرضية</li>
+                        <li>خدمات "سبا" وحلاقة</li>
+                        <li>بث فيديو مباشر لصاحب الكلب</li>
+                    </ul>
+                    <a href="booking.html" class="btn-select">اختر هذه الحزمة</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <div class="social-item">
+                <div class="social-icon-circle">
+                    <a href="#">
+                        <img src="../images/whatsapp-icon.png" alt="واتساب">
+                    </a>
+                </div>
+                <span class="social-label">واتساب</span>
+            </div>
+            <div class="social-item">
+                <div class="social-icon-circle">
+                    <a href="#">
+                        <img src="../images/instagram-icon.png" alt="انستقرام">
+                    </a>
+                </div>
+                <span class="social-label">انستقرام</span>
+            </div>
+            <div class="social-item">
+                <div class="social-icon-circle">
+                    <a href="#">
+                        <img src="../images/facebook-icon.png" alt="فيسبوك">
+                    </a>
+                </div>
+                <span class="social-label">فيسبوك</span>
+            </div>
+        </div>
+        <p>© 2026 لوفينغ هومز - جميع الحقوق محفوظة</p>
+    </footer>
+
+    
+    <div id="ai-chat-icon" onclick="toggleChat()" style="position: fixed; bottom: 20px; right: 20px; background: #FF8C00; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; font-size: 24px;">
+    🤖
+</div>
+
+<div id="ai-chat-window" style="display: none; position: fixed; bottom: 90px; right: 20px; width: 300px; background: white; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.2); z-index: 1000; overflow: hidden; font-family: 'Open Sans', sans-serif;">
+    <div style="background: #d58713; color: white; padding: 15px; font-weight: bold; display: flex; justify-content: space-between;">
+        <span>مساعد لوفينغ هومز الذكي</span>
+        <span onclick="toggleChat()" style="cursor:pointer;">×</span>
+    </div>
+    <div id="chat-body" style="height: 250px; overflow-y: auto; padding: 15px; font-size: 14px; background: #f9f9f9;">
+        <p style="background: #eef2f5; padding: 8px; border-radius: 10px; margin-bottom: 10px;">أهلاً بك! أنا المساعد الذكي، كيف يمكنني مساعدتك اليوم؟</p>
+    </div>
+    <div style="padding: 10px; border-top: 1px solid #eee; display: flex;">
+        <input type="text" id="user-input" placeholder="اسألني عن الحزم..." style="flex: 1; border: none; outline: none; padding: 5px;">
+        <button onclick="aiResponse()" style="background: #FF8C00; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">إرسال</button>
+    </div>
+
+   <script src="../js/script.js"></script>
+</body>
+
+</html>
